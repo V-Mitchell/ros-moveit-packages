@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="arm_assembly">
+    <xacro:macro name="arm_assembly" params="arm_id:='arm_assembly' description_pkg:='' connected_to:='' xyz:='0 0 0' rpy:='0 0 0' safety_distance:=0">
+        <xacro:unless value="${not connected_to}">
+            <joint name="${connected_to}_joint" type="fixed">
+                <parent link="${connected_to}"/>
+                <child link="arm_link0"/>
+                <origin rpy="{rpy}" xyz="${xyz}"/>
+            </joint>
+        </xacro:unless>
+
+        <link
+            name="arm_link0">
+            <inertial>
+            <origin
+                xyz="0.013967 -0.26983 0.41091"
+                rpy="0 0 0" />
+            <mass
+                value="8.6871" />
+            <inertia
+                ixx="1.9198"
+                ixy="0.023083"
+                ixz="-0.042513"
+                iyy="1.2491"
+                iyz="0.84319"
+                izz="0.72195" />
+            </inertial>
+            <visual>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/arm_link0.STL" />
+            </geometry>
+            <material
+                name="">
+                <color
+                rgba="0.79216 0.81961 0.93333 1" />
+            </material>
+            </visual>
+            <collision>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/arm_link0.STL" />
+            </geometry>
+            </collision>
+        </link>
+        <link
+            name="arm_link1">
+            <inertial>
+            <origin
+                xyz="0.013967 -0.26983 0.31436"
+                rpy="0 0 0" />
+            <mass
+                value="8.6871" />
+            <inertia
+                ixx="1.9198"
+                ixy="0.023083"
+                ixz="-0.042513"
+                iyy="1.2491"
+                iyz="0.84319"
+                izz="0.72195" />
+            </inertial>
+            <visual>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/arm_link1.STL" />
+            </geometry>
+            <material
+                name="">
+                <color
+                rgba="0.79216 0.81961 0.93333 1" />
+            </material>
+            </visual>
+            <collision>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/arm_link1.STL" />
+            </geometry>
+            </collision>
+        </link>
+        <joint
+            name="arm_link1_joint"
+            type="revolute">
+            <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-3.14" soft_upper_limit="3.14"/>
+            <origin
+            xyz="0 0 0.09655"
+            rpy="0 0 0" />
+            <parent
+            link="arm_link0" />
+            <child
+            link="arm_link1" />
+            <axis
+            xyz="0 0 1" />
+            <limit
+            lower="-3.14"
+            upper="3.14"
+            effort="80"
+            velocity="25" />
+        </joint>
+        <link
+            name="arm_link2">
+            <inertial>
+            <origin
+                xyz="0.013963 -0.21878 0.26916"
+                rpy="0 0 0" />
+            <mass
+                value="8.6871" />
+            <inertia
+                ixx="1.9198"
+                ixy="0.023083"
+                ixz="-0.042513"
+                iyy="1.2491"
+                iyz="0.84319"
+                izz="0.72195" />
+            </inertial>
+            <visual>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/arm_link2.STL" />
+            </geometry>
+            <material
+                name="">
+                <color
+                rgba="0.79216 0.81961 0.93333 1" />
+            </material>
+            </visual>
+            <collision>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/arm_link2.STL" />
+            </geometry>
+            </collision>
+        </link>
+        <joint
+            name="arm_link2_joint"
+            type="revolute">
+            <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-3.14" soft_upper_limit="3.14"/>
+            <origin
+            xyz="0 -0.051052 0.0452"
+            rpy="0 0 0" />
+            <parent
+            link="arm_link1" />
+            <child
+            link="arm_link2" />
+            <axis
+            xyz="1 0 0" />
+            <limit
+            lower="-3.14"
+            upper="3.14"
+            effort="80"
+            velocity="25" />
+        </joint>
+        <link
+            name="arm_link3">
+            <inertial>
+            <origin
+                xyz="0.013963 -0.21878 -0.34044"
+                rpy="0 0 0" />
+            <mass
+                value="8.6871" />
+            <inertia
+                ixx="1.9198"
+                ixy="0.023083"
+                ixz="-0.042513"
+                iyy="1.2491"
+                iyz="0.84319"
+                izz="0.72195" />
+            </inertial>
+            <visual>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/arm_link3.STL" />
+            </geometry>
+            <material
+                name="">
+                <color
+                rgba="0.79216 0.81961 0.93333 1" />
+            </material>
+            </visual>
+            <collision>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/arm_link3.STL" />
+            </geometry>
+            </collision>
+        </link>
+        <joint
+            name="arm_link3_joint"
+            type="revolute">
+            <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-3.14" soft_upper_limit="3.14"/>
+            <origin
+            xyz="0 0 0.6096"
+            rpy="0 0 0" />
+            <parent
+            link="arm_link2" />
+            <child
+            link="arm_link3" />
+            <axis
+            xyz="-1 0 0" />
+            <limit
+            lower="-3.14"
+            upper="3.14"
+            effort="80"
+            velocity="25" />
+        </joint>
+        <link
+            name="arm_link4">
+            <inertial>
+            <origin
+                xyz="-0.066773 0.26345 -0.33441"
+                rpy="0 0 0" />
+            <mass
+                value="8.6871" />
+            <inertia
+                ixx="1.9198"
+                ixy="0.023083"
+                ixz="-0.042513"
+                iyy="1.2491"
+                iyz="0.84319"
+                izz="0.72195" />
+            </inertial>
+            <visual>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/arm_link4.STL" />
+            </geometry>
+            <material
+                name="">
+                <color
+                rgba="0.79216 0.81961 0.93333 1" />
+            </material>
+            </visual>
+            <collision>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/arm_link4.STL" />
+            </geometry>
+            </collision>
+        </link>
+        <joint
+            name="arm_link4_joint"
+            type="revolute">
+            <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-3.14" soft_upper_limit="3.14"/>
+            <origin
+            xyz="0.080736 -0.48223 -0.00603"
+            rpy="0 0 0" />
+            <parent
+            link="arm_link3" />
+            <child
+            link="arm_link4" />
+            <axis
+            xyz="1 0 0" />
+            <limit
+            lower="-3.14"
+            upper="3.14"
+            effort="80"
+            velocity="25" />
+        </joint>
+        <link
+            name="arm_link5">
+            <inertial>
+            <origin
+                xyz="0.014247 0.28573 -0.36767"
+                rpy="0 0 0" />
+            <mass
+                value="8.6871" />
+            <inertia
+                ixx="1.9198"
+                ixy="0.023083"
+                ixz="-0.042513"
+                iyy="1.2491"
+                iyz="0.84319"
+                izz="0.72195" />
+            </inertial>
+            <visual>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/arm_link5.STL" />
+            </geometry>
+            <material
+                name="">
+                <color
+                rgba="0.79216 0.81961 0.93333 1" />
+            </material>
+            </visual>
+            <collision>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/arm_link5.STL" />
+            </geometry>
+            </collision>
+        </link>
+        <joint
+            name="arm_link5_joint"
+            type="revolute">
+            <safety_controller k_position="100.0" k_velocity="40.0" soft_lower_limit="-3.14" soft_upper_limit="3.14"/>
+            <origin
+            xyz="-0.08102 -0.02228 0.03326"
+            rpy="0 0 0" />
+            <parent
+            link="arm_link4" />
+            <child
+            link="arm_link5" />
+            <axis
+            xyz="0 -1 0" />
+            <limit
+            lower="-3.14"
+            upper="3.14"
+            effort="80"
+            velocity="25" />
+        </joint>
+    </xacro:macro>
+</robot>

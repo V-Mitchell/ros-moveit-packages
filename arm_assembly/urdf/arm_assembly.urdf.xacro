@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="arm_assembly">
+
+    <xacro:arg name="arm_id" default="arm_assembly" /> <!-- Name of this arm -->
+    <xacro:arg name="gazebo" default="false" /> <!-- Is the robot being simulated in gazebo? -->
+
+    <xacro:property name="arm_id" value="$(arg arm_id)" />
+
+    <xacro:unless value="$(arg gazebo)">
+        <!-- Create a URDF for real hardware -->
+        <xacro:include filename="arm_assembly.xacro" />
+        <xacro:arm_assembly arm_id="${arm_id}" safety_distance="0.03" />
+
+    </xacro:unless>
+
+    <xacro:if value="$(arg gazebo)"> <!-- I don't think this is necessary if using moveit (RViz)-->
+        <xacro:arg name="xyz" default="0 0 0" />
+        <xacro:arg name="rpy" default="0 0 0" />
+
+        <!-- Create Simulatable URDF -->
+
+
+        <xacro:arm_assembly arm_id="${arm_id}" />
+
+        <!-- Gazebo require a joint to a link called "world" for statically mounted robots -->
+        <link name="world" />
+        <joint name="world_joint" type="fixed">
+            <origin xyz="$(arg xyz)" rpy="$(arg rpy)" />
+            <parent link="world" />
+            <child link="arm_link0" />
+        </joint>
+
+        <xacro:gazebo-joint joint="arm_link1_joint" transmission="hardware_interface/EffortJointInterface" />
+        <xacro:gazebo-joint joint="arm_link2_joint" transmission="hardware_interface/EffortJointInterface" />
+        <xacro:gazebo-joint joint="arm_link3_joint" transmission="hardware_interface/EffortJointInterface" />
+        <xacro:gazebo-joint joint="arm_link4_joint" transmission="hardware_interface/EffortJointInterface" />
+        <xacro:gazebo-joint joint="arm_link5_joint" transmission="hardware_interface/EffortJointInterface" />
+
+        <xacro:transmission-arm-state arm_id="${arm_id}" />
+        <xacro:transmission-arm-model arm_id="${arm_id}" root="arm_link1_joint" tip="arm_link5_joint" />
+
+        <gazebo>
+            <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+                <robotNamespace>${arm_id}</robotNamespace>
+                <controlPeriod>0.001</controlPeriod> <!-- refresh rate -->
+                <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+            </plugin>
+            <self_collide>true</self_collide>
+        </gazebo>
+    </xacro:if>
+</robot>

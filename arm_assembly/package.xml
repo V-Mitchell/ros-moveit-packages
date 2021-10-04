@@ -1,0 +1,18 @@
+<package format="2">
+  <name>arm_assembly</name>
+  <version>1.0.0</version>
+  <description>URDF Description package for arm_assembly</description>
+  <author>Victor Mitchell</author>
+  <maintainer email="victorcmitchell@gmail.com" />
+  <license>Apache 2.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roslaunch</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>rviz</depend>
+  <depend>joint_state_publisher_gui</depend>
+  <depend>gazebo</depend>
+  
+  <exec_depend>xacro</exec_depend>
+</package>

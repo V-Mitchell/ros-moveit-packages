@@ -1,0 +1,6 @@
+<launch>
+
+  <node name="rover_arm_interface" pkg="rover_arm_interface" type="rover_arm_interface" respawn="false" output="screen">
+  </node>
+
+</launch>
