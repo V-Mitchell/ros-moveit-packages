@@ -8,17 +8,17 @@
     name="arm_link0">
     <inertial>
       <origin
-        xyz="0.013967 -0.26983 0.41091"
+        xyz="0.014023 -0.26919 0.41045"
         rpy="0 0 0" />
       <mass
-        value="8.6871" />
+        value="8.6759" />
       <inertia
-        ixx="1.9198"
-        ixy="0.023083"
-        ixz="-0.042513"
-        iyy="1.2491"
-        iyz="0.84319"
-        izz="0.72195" />
+        ixx="1.9156"
+        ixy="0.023298"
+        ixz="-0.042689"
+        iyy="1.2477"
+        iyz="0.84122"
+        izz="0.71914" />
     </inertial>
     <visual>
       <origin
@@ -48,17 +48,17 @@
     name="arm_link1">
     <inertial>
       <origin
-        xyz="0.013967 -0.26983 0.31436"
+        xyz="0.014023 -0.26919 0.3139"
         rpy="0 0 0" />
       <mass
-        value="8.6871" />
+        value="8.6759" />
       <inertia
-        ixx="1.9198"
-        ixy="0.023083"
-        ixz="-0.042513"
-        iyy="1.2491"
-        iyz="0.84319"
-        izz="0.72195" />
+        ixx="1.9156"
+        ixy="0.023298"
+        ixz="-0.042689"
+        iyy="1.2477"
+        iyz="0.84122"
+        izz="0.71914" />
     </inertial>
     <visual>
       <origin
@@ -106,17 +106,17 @@
     name="arm_link2">
     <inertial>
       <origin
-        xyz="0.013963 -0.21878 0.26916"
+        xyz="0.014019 -0.21814 0.2687"
         rpy="0 0 0" />
       <mass
-        value="8.6871" />
+        value="8.6759" />
       <inertia
-        ixx="1.9198"
-        ixy="0.023083"
-        ixz="-0.042513"
-        iyy="1.2491"
-        iyz="0.84319"
-        izz="0.72195" />
+        ixx="1.9156"
+        ixy="0.023298"
+        ixz="-0.042689"
+        iyy="1.2477"
+        iyz="0.84122"
+        izz="0.71914" />
     </inertial>
     <visual>
       <origin
@@ -164,17 +164,17 @@
     name="arm_link3">
     <inertial>
       <origin
-        xyz="0.013963 -0.21878 -0.34044"
+        xyz="0.014019 -0.21814 -0.3409"
         rpy="0 0 0" />
       <mass
-        value="8.6871" />
+        value="8.6759" />
       <inertia
-        ixx="1.9198"
-        ixy="0.023083"
-        ixz="-0.042513"
-        iyy="1.2491"
-        iyz="0.84319"
-        izz="0.72195" />
+        ixx="1.9156"
+        ixy="0.023298"
+        ixz="-0.042689"
+        iyy="1.2477"
+        iyz="0.84122"
+        izz="0.71914" />
     </inertial>
     <visual>
       <origin
@@ -222,17 +222,17 @@
     name="arm_link4">
     <inertial>
       <origin
-        xyz="-0.066773 0.26345 -0.33441"
+        xyz="-0.066717 0.26409 -0.33487"
         rpy="0 0 0" />
       <mass
-        value="8.6871" />
+        value="8.6759" />
       <inertia
-        ixx="1.9198"
-        ixy="0.023083"
-        ixz="-0.042513"
-        iyy="1.2491"
-        iyz="0.84319"
-        izz="0.72195" />
+        ixx="1.9156"
+        ixy="0.023298"
+        ixz="-0.042689"
+        iyy="1.2477"
+        iyz="0.84122"
+        izz="0.71914" />
     </inertial>
     <visual>
       <origin
@@ -280,17 +280,17 @@
     name="arm_link5">
     <inertial>
       <origin
-        xyz="0.014247 0.28573 -0.36767"
+        xyz="0.014303 0.28637 -0.36813"
         rpy="0 0 0" />
       <mass
-        value="8.6871" />
+        value="8.6759" />
       <inertia
-        ixx="1.9198"
-        ixy="0.023083"
-        ixz="-0.042513"
-        iyy="1.2491"
-        iyz="0.84319"
-        izz="0.72195" />
+        ixx="1.9156"
+        ixy="0.023298"
+        ixz="-0.042689"
+        iyy="1.2477"
+        iyz="0.84122"
+        izz="0.71914" />
     </inertial>
     <visual>
       <origin
@@ -328,6 +328,180 @@
       link="arm_link5" />
     <axis
       xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="gripper_finger1">
+    <inertial>
+      <origin
+        xyz="-0.011165 -0.085231 3.153E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.020758" />
+      <inertia
+        ixx="5.6257E-05"
+        ixy="-1.6742E-05"
+        ixz="6.5594E-20"
+        iyy="1.1909E-05"
+        iyz="1.3762E-19"
+        izz="6.7392E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_assembly/meshes/gripper_finger1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_assembly/meshes/gripper_finger1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_finger1_joint"
+    type="revolute">
+    <origin
+      xyz="0.0762 -0.13859 0"
+      rpy="0 0 0" />
+    <parent
+      link="arm_link5" />
+    <child
+      link="gripper_finger1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="gripper_finger2">
+    <inertial>
+      <origin
+        xyz="-0.011165 -0.085231 3.0531E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.020758" />
+      <inertia
+        ixx="5.6257E-05"
+        ixy="-1.6742E-05"
+        ixz="-3.3881E-21"
+        iyy="1.1909E-05"
+        iyz="1.0554E-20"
+        izz="6.7392E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_assembly/meshes/gripper_finger2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_assembly/meshes/gripper_finger2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_finger2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0381 -0.13859 0.065991"
+      rpy="-3.1416 -1.0472 3.1416" />
+    <parent
+      link="arm_link5" />
+    <child
+      link="gripper_finger2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="gripper_finger3">
+    <inertial>
+      <origin
+        xyz="-0.011165 -0.085231 5.5511E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.020758" />
+      <inertia
+        ixx="5.6257E-05"
+        ixy="-1.6742E-05"
+        ixz="3.3881E-21"
+        iyy="1.1909E-05"
+        iyz="-4.4222E-21"
+        izz="6.7392E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_assembly/meshes/gripper_finger3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_assembly/meshes/gripper_finger3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_finger3_joint"
+    type="revolute">
+    <origin
+      xyz="-0.0381 -0.13859 -0.065991"
+      rpy="-3.1416 1.0472 -3.1416" />
+    <parent
+      link="arm_link5" />
+    <child
+      link="gripper_finger3" />
+    <axis
+      xyz="0 0 -1" />
     <limit
       lower="0"
       upper="0"
