@@ -344,5 +344,179 @@
             effort="80"
             velocity="25" />
         </joint>
+        <link
+            name="gripper_finger1">
+            <inertial>
+            <origin
+                xyz="-0.011165 -0.085231 3.153E-14"
+                rpy="0 0 0" />
+            <mass
+                value="0.020758" />
+            <inertia
+                ixx="5.6257E-05"
+                ixy="-1.6742E-05"
+                ixz="6.5594E-20"
+                iyy="1.1909E-05"
+                iyz="1.3762E-19"
+                izz="6.7392E-05" />
+            </inertial>
+            <visual>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/gripper_finger1.STL" />
+            </geometry>
+            <material
+                name="">
+                <color
+                rgba="1 1 1 1" />
+            </material>
+            </visual>
+            <collision>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/gripper_finger1.STL" />
+            </geometry>
+            </collision>
+        </link>
+        <joint
+            name="gripper_finger1_joint"
+            type="revolute">
+            <origin
+            xyz="0.0762 -0.13859 0"
+            rpy="0 0 0" />
+            <parent
+            link="arm_link5" />
+            <child
+            link="gripper_finger1" />
+            <axis
+            xyz="0 0 -1" />
+            <limit
+            lower="-3.14"
+            upper="0"
+            effort="80"
+            velocity="25" />
+        </joint>
+        <link
+            name="gripper_finger2">
+            <inertial>
+            <origin
+                xyz="-0.011165 -0.085231 3.0531E-16"
+                rpy="0 0 0" />
+            <mass
+                value="0.020758" />
+            <inertia
+                ixx="5.6257E-05"
+                ixy="-1.6742E-05"
+                ixz="-3.3881E-21"
+                iyy="1.1909E-05"
+                iyz="1.0554E-20"
+                izz="6.7392E-05" />
+            </inertial>
+            <visual>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/gripper_finger2.STL" />
+            </geometry>
+            <material
+                name="">
+                <color
+                rgba="1 1 1 1" />
+            </material>
+            </visual>
+            <collision>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/gripper_finger2.STL" />
+            </geometry>
+            </collision>
+        </link>
+        <joint
+            name="gripper_finger2_joint"
+            type="revolute">
+            <origin
+            xyz="-0.0381 -0.13859 0.065991"
+            rpy="-3.1416 -1.0472 3.1416" />
+            <parent
+            link="arm_link5" />
+            <child
+            link="gripper_finger2" />
+            <axis
+            xyz="0 0 -1" />
+            <limit
+            lower="-3.14"
+            upper="0"
+            effort="80"
+            velocity="25" />
+        </joint>
+        <link
+            name="gripper_finger3">
+            <inertial>
+            <origin
+                xyz="-0.011165 -0.085231 5.5511E-16"
+                rpy="0 0 0" />
+            <mass
+                value="0.020758" />
+            <inertia
+                ixx="5.6257E-05"
+                ixy="-1.6742E-05"
+                ixz="3.3881E-21"
+                iyy="1.1909E-05"
+                iyz="-4.4222E-21"
+                izz="6.7392E-05" />
+            </inertial>
+            <visual>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/gripper_finger3.STL" />
+            </geometry>
+            <material
+                name="">
+                <color
+                rgba="1 1 1 1" />
+            </material>
+            </visual>
+            <collision>
+            <origin
+                xyz="0 0 0"
+                rpy="0 0 0" />
+            <geometry>
+                <mesh
+                filename="package://arm_assembly/meshes/gripper_finger3.STL" />
+            </geometry>
+            </collision>
+        </link>
+        <joint
+            name="gripper_finger3_joint"
+            type="revolute">
+            <origin
+            xyz="-0.0381 -0.13859 -0.065991"
+            rpy="-3.1416 1.0472 -3.1416" />
+            <parent
+            link="arm_link5" />
+            <child
+            link="gripper_finger3" />
+            <axis
+            xyz="0 0 -1" />
+            <limit
+            lower="-3.14"
+            upper="0"
+            effort="80"
+            velocity="25" />
+        </joint>
     </xacro:macro>
 </robot>

@@ -1,12 +1,12 @@
 <package>
 
-  <name>arm_assembly_config</name>
+  <name>arm_gripper_config</name>
   <version>0.3.0</version>
   <description>
      An automatically generated package with all the configuration and launch files for using the arm_assembly with the MoveIt Motion Planning Framework
   </description>
-  <author email="victorcmitchell@gmail.com">Victor Mitchell</author>
-  <maintainer email="victorcmitchell@gmail.com">Victor Mitchell</maintainer>
+  <author email="victorcmitchell@gmail.com">V Mitchell</author>
+  <maintainer email="victorcmitchell@gmail.com">V Mitchell</maintainer>
 
   <license>BSD</license>
 
@@ -31,7 +31,7 @@
   <run_depend>xacro</run_depend>
   <!-- This package is referenced in the warehouse launch files, but does not build out of the box at the moment. Commented the dependency until this works. -->
   <!-- <run_depend>warehouse_ros_mongo</run_depend> -->
-  <run_depend>arm_assembly</run_depend>
+    <run_depend>arm_assembly</run_depend>
 
 
 </package>

@@ -1,5 +1,15 @@
 <launch>
 
+  <arg name="device_path" default="/dev/input/js0" />
+  <arg name="deadzone" default="0.075" />
+  <arg name="refresh_rate" default="10" />
+
+  <node name="joy" pkg="joy" type="joy_node" respawn="false" output="screen">
+    <param name="dev" value="$(arg device_path)"/>
+    <param name="deadzone" value="$(arg deadzone)"/>
+    <param name="autorepeat_rate" value="$(arg refresh_rate)"/>
+  </node>
+
   <node name="rover_arm_interface" pkg="rover_arm_interface" type="rover_arm_interface" respawn="false" output="screen">
   </node>
 
