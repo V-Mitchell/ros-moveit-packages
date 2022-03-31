@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rover_assembly">
+
+    <xacro:arg name="rover_id" default="rover_assembly" /> <!-- Name of this rover -->
+    <xacro:arg name="gazebo" default="false" /> <!-- Is the robot being simulated in gazebo? -->
+
+    <xacro:property name="rover_id" value="$(arg rover_id)" />
+
+    <xacro:unless value="$(arg gazebo)">
+        <!-- Create a URDF for real hardware -->
+        <xacro:include filename="rover_assembly.xacro" />
+        <xacro:rover_assembly rover_id="${rover_id}" safety_distance="0.03" />
+
+    </xacro:unless>
+
+    <xacro:if value="$(arg gazebo)"> <!-- I don't think this is necessary if using moveit (RViz)-->
+        <xacro:arg name="xyz" default="0 0 0" />
+        <xacro:arg name="rpy" default="0 0 0" />
+
+        <!-- Create Simulatable URDF -->
+
+
+    </xacro:if>
+</robot>

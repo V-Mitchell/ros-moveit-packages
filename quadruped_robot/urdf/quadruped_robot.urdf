@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="quadruped_robot">
+  <link
+    name="qr_link0">
+    <inertial>
+      <origin
+        xyz="-1.20157099267962E-17 -1.91940711676074E-17 -0.00792400927233343"
+        rpy="0 0 0" />
+      <mass
+        value="0.113278669277608" />
+      <inertia
+        ixx="0.000106411692170112"
+        ixy="5.41070124900122E-22"
+        ixz="1.18038034853776E-21"
+        iyy="3.32526369178412E-05"
+        iyz="3.33163301568769E-21"
+        izz="0.000134182063446786" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_link0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_link0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="qr_fl_link1">
+    <inertial>
+      <origin
+        xyz="0.0145827808973165 6.439012212648E-05 -0.000321132201444621"
+        rpy="0 0 0" />
+      <mass
+        value="0.0115266360856749" />
+      <inertia
+        ixx="1.40173854300565E-06"
+        ixy="5.89034615739042E-08"
+        ixz="6.8023620380515E-09"
+        iyy="7.9301620576998E-07"
+        iyz="-1.63948551300763E-08"
+        izz="1.82247054491638E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_fl_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_fl_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qr_fl_link1_joint"
+    type="revolute">
+    <origin
+      xyz="0.012475 -0.05545 0"
+      rpy="0 0 0" />
+    <parent
+      link="qr_link0" />
+    <child
+      link="qr_fl_link1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="qr_fl_link2">
+    <inertial>
+      <origin
+        xyz="0.0155498713616467 0.0149071616129032 4.1098563788311E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0122144260462953" />
+      <inertia
+        ixx="2.07409010062991E-06"
+        ixy="1.71055225514763E-07"
+        ixz="-1.93847781922793E-13"
+        iyy="7.49373217275002E-07"
+        iyz="6.00061570972654E-13"
+        izz="2.48725687156748E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_fl_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_fl_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qr_fl_link2_joint"
+    type="revolute">
+    <origin
+      xyz="0.03645 -0.00615 0"
+      rpy="0 0 0" />
+    <parent
+      link="qr_fl_link1" />
+    <child
+      link="qr_fl_link2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="qr_fl_link3">
+    <inertial>
+      <origin
+        xyz="-0.000324999999999985 0.00026160094761418 -0.0132084566072264"
+        rpy="0 0 0" />
+      <mass
+        value="0.0010736396629226" />
+      <inertia
+        ixx="3.25512125255747E-07"
+        ixy="1.6391874387632E-24"
+        ixz="1.9937204373129E-22"
+        iyy="3.21758329283348E-07"
+        iyz="7.43498918658266E-09"
+        izz="5.05826816285072E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_fl_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_fl_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qr_fl_link3_joint"
+    type="revolute">
+    <origin
+      xyz="0.002175 0.055 0"
+      rpy="0 0 0" />
+    <parent
+      link="qr_fl_link2" />
+    <child
+      link="qr_fl_link3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="qr_fl_link4">
+    <inertial>
+      <origin
+        xyz="0.00235 4.77048955893622E-18 6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="6.63661448070844E-05" />
+      <inertia
+        ixx="3.50496202262415E-10"
+        ixy="2.667200621103E-25"
+        ixz="9.70826730698041E-26"
+        iyy="1.97370149400236E-10"
+        iyz="-1.29246970711411E-27"
+        izz="1.97370149400236E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_fl_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.101960784313725 0.101960784313725 0.101960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_fl_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qr_fl_link4_joint"
+    type="fixed">
+    <origin
+      xyz="-0.000325 0.0028868 -0.04"
+      rpy="0 0 0" />
+    <parent
+      link="qr_fl_link3" />
+    <child
+      link="qr_fl_link4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="qr_fr_link1">
+    <inertial>
+      <origin
+        xyz="-0.0145827808973165 6.43901221264592E-05 -0.000321165040133154"
+        rpy="0 0 0" />
+      <mass
+        value="0.0115266360856749" />
+      <inertia
+        ixx="1.40173790096394E-06"
+        ixy="-5.89034615739026E-08"
+        ixz="-6.8030409890926E-09"
+        iyy="7.9301556372827E-07"
+        iyz="-1.64004239999686E-08"
+        izz="1.82247054491638E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_fr_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_fr_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qr_fr_link1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.012475 -0.05545 0"
+      rpy="0 0 0" />
+    <parent
+      link="qr_link0" />
+    <child
+      link="qr_fr_link1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="qr_fr_link2">
+    <inertial>
+      <origin
+        xyz="-0.0155498713616467 0.0149071616129031 -4.10985639270889E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0122144260462953" />
+      <inertia
+        ixx="2.07409010062992E-06"
+        ixy="-1.71055225514762E-07"
+        ixz="-1.93847781631286E-13"
+        iyy="7.49373217275002E-07"
+        iyz="-6.00061571325335E-13"
+        izz="2.48725687156748E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_fr_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_fr_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qr_fr_link2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.03645 -0.00615000000000003 0"
+      rpy="0 0 0" />
+    <parent
+      link="qr_fr_link1" />
+    <child
+      link="qr_fr_link2" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="qr_fr_link3">
+    <inertial>
+      <origin
+        xyz="0.000324999999999992 0.00026160094761421 -0.0132084566072264"
+        rpy="0 0 0" />
+      <mass
+        value="0.0010736396629226" />
+      <inertia
+        ixx="3.25512125255748E-07"
+        ixy="1.22318873134903E-23"
+        ixz="-3.75755848620029E-22"
+        iyy="3.21758329283348E-07"
+        iyz="7.43498918658268E-09"
+        izz="5.05826816285072E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_fr_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_fr_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qr_fr_link3_joint"
+    type="revolute">
+    <origin
+      xyz="-0.002175 0.055 0"
+      rpy="0 0 0" />
+    <parent
+      link="qr_fr_link2" />
+    <child
+      link="qr_fr_link3" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="qr_fr_link4">
+    <inertial>
+      <origin
+        xyz="-0.00235000000000001 -8.89045781438114E-17 -4.85722573273506E-17"
+        rpy="0 0 0" />
+      <mass
+        value="6.63661448070845E-05" />
+      <inertia
+        ixx="3.50496202262415E-10"
+        ixy="2.67880422808151E-25"
+        ixz="1.18522254564732E-25"
+        iyy="1.97370149400236E-10"
+        iyz="-8.61646471409404E-28"
+        izz="1.97370149400236E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_fr_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.101960784313725 0.101960784313725 0.101960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_fr_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qr_fr_link4_joint"
+    type="fixed">
+    <origin
+      xyz="0.000325 0.0028868 -0.04"
+      rpy="0 0 0" />
+    <parent
+      link="qr_fr_link3" />
+    <child
+      link="qr_fr_link4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="qr_bl_link1">
+    <inertial>
+      <origin
+        xyz="0.0145827808973165 -6.43901221264731E-05 -0.000321165040133173"
+        rpy="0 0 0" />
+      <mass
+        value="0.0115266360856749" />
+      <inertia
+        ixx="1.40173790096395E-06"
+        ixy="-5.89034615739038E-08"
+        ixz="6.80304098909223E-09"
+        iyy="7.9301556372827E-07"
+        iyz="1.64004239999677E-08"
+        izz="1.82247054491638E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_bl_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_bl_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qr_bl_link1_joint"
+    type="revolute">
+    <origin
+      xyz="0.012475 0.05545 0"
+      rpy="0 0 0" />
+    <parent
+      link="qr_link0" />
+    <child
+      link="qr_bl_link1" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="qr_bl_link2">
+    <inertial>
+      <origin
+        xyz="0.0155498713616467 0.0149071616129032 4.10985643434225E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0122144260462953" />
+      <inertia
+        ixx="2.07409010062992E-06"
+        ixy="1.71055225514764E-07"
+        ixz="-1.93847783314236E-13"
+        iyy="7.49373217275003E-07"
+        iyz="6.00061571805507E-13"
+        izz="2.48725687156749E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_bl_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_bl_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qr_bl_link2_joint"
+    type="revolute">
+    <origin
+      xyz="0.03645 0.00615000000000004 0"
+      rpy="0 0 0" />
+    <parent
+      link="qr_bl_link1" />
+    <child
+      link="qr_bl_link2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="qr_bl_link3">
+    <inertial>
+      <origin
+        xyz="-0.000325 0.0002616 -0.013208"
+        rpy="0 0 0" />
+      <mass
+        value="0.0010736" />
+      <inertia
+        ixx="3.2551E-07"
+        ixy="-1.394E-23"
+        ixz="8.8795E-22"
+        iyy="3.2176E-07"
+        iyz="7.435E-09"
+        izz="5.0583E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_bl_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_bl_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qr_bl_link3_joint"
+    type="revolute">
+    <origin
+      xyz="0.00217500000000011 0.055 0"
+      rpy="0 0 0" />
+    <parent
+      link="qr_bl_link2" />
+    <child
+      link="qr_bl_link3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="qr_bl_link4">
+    <inertial>
+      <origin
+        xyz="0.00235 8.3267E-17 1.8041E-16"
+        rpy="0 0 0" />
+      <mass
+        value="6.6366E-05" />
+      <inertia
+        ixx="3.505E-10"
+        ixy="3.372E-25"
+        ixz="4.1291E-25"
+        iyy="1.9737E-10"
+        iyz="-8.6165E-27"
+        izz="1.9737E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_bl_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.10196 0.10196 0.10196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_bl_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qr_bl_link4_joint"
+    type="fixed">
+    <origin
+      xyz="-0.000325 0.0028868 -0.04"
+      rpy="0 0 0" />
+    <parent
+      link="qr_bl_link3" />
+    <child
+      link="qr_bl_link4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="qr_br_link1">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_br_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_br_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qr_br_link1_joint"
+    type="revolute">
+    <origin
+      xyz="-0.012475 0.0554499999999999 0"
+      rpy="0 0 0" />
+    <parent
+      link="qr_link0" />
+    <child
+      link="qr_br_link1" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="qr_br_link2">
+    <inertial>
+      <origin
+        xyz="-0.0155498713616467 0.0149071616129032 -4.10985640138251E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0122144260462953" />
+      <inertia
+        ixx="2.07409010062991E-06"
+        ixy="-1.71055225514763E-07"
+        ixz="-1.9384778223159E-13"
+        iyy="7.49373217275002E-07"
+        iyz="-6.0006157066614E-13"
+        izz="2.48725687156748E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_br_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_br_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qr_br_link2_joint"
+    type="revolute">
+    <origin
+      xyz="-0.03645 0.00615000000000002 0"
+      rpy="0 0 0" />
+    <parent
+      link="qr_br_link1" />
+    <child
+      link="qr_br_link2" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="qr_br_link3">
+    <inertial>
+      <origin
+        xyz="0.000325 0.0002616 -0.013208"
+        rpy="0 0 0" />
+      <mass
+        value="0.0010736" />
+      <inertia
+        ixx="3.2551E-07"
+        ixy="-1.0389E-23"
+        ixz="4.4731E-22"
+        iyy="3.2176E-07"
+        iyz="7.435E-09"
+        izz="5.0583E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_br_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_br_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qr_br_link3_joint"
+    type="revolute">
+    <origin
+      xyz="-0.002175 0.055 0"
+      rpy="0 0 0" />
+    <parent
+      link="qr_br_link2" />
+    <child
+      link="qr_br_link3" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="qr_br_link4">
+    <inertial>
+      <origin
+        xyz="-0.00235 -2.7756E-17 6.9389E-18"
+        rpy="0 0 0" />
+      <mass
+        value="6.6366E-05" />
+      <inertia
+        ixx="3.505E-10"
+        ixy="3.3655E-26"
+        ixz="2.3482E-25"
+        iyy="1.9737E-10"
+        iyz="2.3641E-26"
+        izz="1.9737E-10" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_br_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.10196 0.10196 0.10196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadruped_robot/meshes/qr_br_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qr_br_link4_joint"
+    type="fixed">
+    <origin
+      xyz="0.000325 0.0028868 -0.04"
+      rpy="0 0 0" />
+    <parent
+      link="qr_br_link3" />
+    <child
+      link="qr_br_link4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

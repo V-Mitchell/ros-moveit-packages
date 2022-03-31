@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'qr_fl_link1_joint', 'qr_fl_link2_joint', 'qr_fl_link3_joint', 'qr_fr_link1_joint', 'qr_fr_link2_joint', 'qr_fr_link3_joint', 'qr_bl_link1_joint', 'qr_bl_link2_joint', 'qr_bl_link3_joint', 'qr_br_link1_joint', 'qr_br_link2_joint', 'qr_br_link3_joint', ]

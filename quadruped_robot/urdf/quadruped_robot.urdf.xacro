@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="quadruped_robot">
+
+    <xacro:arg name="quadruped_id" default="quadruped_robot" /> <!-- Name of this robot -->
+    <xacro:arg name="gazebo" default="false" /> <!-- Is the robot being simulated in gazebo? -->
+
+    <xacro:property name="quadruped_id" value="$(arg quadruped_id)" />
+
+    <xacro:unless value="$(arg gazebo)">
+        <!-- Create a URDF for real hardware -->
+        <xacro:include filename="quadruped_robot.xacro" />
+        <xacro:quadruped_robot quadruped_id="${quadruped_id}" safety_distance="0.03" />
+
+    </xacro:unless>
+
+    <xacro:if value="$(arg gazebo)"> <!-- I don't think this is necessary if using moveit (RViz)-->
+        <xacro:arg name="xyz" default="0 0 0" />
+        <xacro:arg name="rpy" default="0 0 0" />
+
+        <!-- Create Simulatable URDF -->
+
+
+        <xacro:quadruped_robot quadruped_id="${quadruped_id}" />
+
+        <!-- Gazebo require a joint to a link called "world" for statically mounted robots -->
+        <link name="world" />
+        <joint name="world_joint" type="fixed">
+            <origin xyz="$(arg xyz)" rpy="$(arg rpy)" />
+            <parent link="world" />
+            <child link="qr_link0" />
+        </joint>
+
+        
+
+        <gazebo>
+            <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+                <robotNamespace>${quadruped_id}</robotNamespace>
+                <controlPeriod>0.001</controlPeriod> <!-- refresh rate -->
+                <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+            </plugin>
+            <self_collide>true</self_collide>
+        </gazebo>
+    </xacro:if>
+    
+</robot>

@@ -1,0 +1,34 @@
+controller_list:
+  - name: fake_fl_leg_controller
+    type: $(arg execution_type)
+    joints:
+      - qr_fl_link1_joint
+      - qr_fl_link2_joint
+      - qr_fl_link3_joint
+  - name: fake_fr_leg_controller
+    type: $(arg execution_type)
+    joints:
+      - qr_fr_link1_joint
+      - qr_fr_link2_joint
+      - qr_fr_link3_joint
+  - name: fake_bl_leg_controller
+    type: $(arg execution_type)
+    joints:
+      - qr_bl_link1_joint
+      - qr_bl_link2_joint
+      - qr_bl_link3_joint
+  - name: fake_br_leg_controller
+    type: $(arg execution_type)
+    joints:
+      - qr_br_link1_joint
+      - qr_br_link2_joint
+      - qr_br_link3_joint
+initial:  # Define initial robot poses.
+  - group: fl_leg
+    pose: fl_home
+  - group: fr_leg
+    pose: fr_home
+  - group: bl_leg
+    pose: bl_home
+  - group: br_leg
+    pose: br_home
