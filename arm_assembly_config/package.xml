@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <package>
 
   <name>arm_assembly_config</name>
@@ -8,13 +9,13 @@
   <author email="victorcmitchell@gmail.com">Victor Mitchell</author>
   <maintainer email="victorcmitchell@gmail.com">Victor Mitchell</maintainer>
 
-  <license>BSD</license>
+  <license>Apache 2.0</license>
 
   <url type="website">http://moveit.ros.org/</url>
   <url type="bugtracker">https://github.com/ros-planning/moveit/issues</url>
   <url type="repository">https://github.com/ros-planning/moveit</url>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
 
   <run_depend>moveit_ros_move_group</run_depend>
   <run_depend>moveit_fake_controller_manager</run_depend>
@@ -31,7 +32,9 @@
   <run_depend>xacro</run_depend>
   <!-- This package is referenced in the warehouse launch files, but does not build out of the box at the moment. Commented the dependency until this works. -->
   <!-- <run_depend>warehouse_ros_mongo</run_depend> -->
-  <run_depend>arm_assembly</run_depend>
-
-
+  <!--  <run_depend>arm_assembly</run_depend> -->
+  
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 </package>
